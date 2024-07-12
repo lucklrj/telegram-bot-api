@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
+	tgbotapi "github.com/lucklrj/telegram-bot-api"
 )
 
 var numericKeyboard = tgbotapi.NewReplyKeyboard(

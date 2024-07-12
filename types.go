@@ -648,7 +648,7 @@ func (m *Message) IsCommand() bool {
 	}
 
 	for _, entity := range m.Entities {
-		if entity.Offset == 0 && entity.IsCommand() {
+		if entity.Offset >= 0 && entity.IsCommand() {
 			return true
 		}
 	}

@@ -647,8 +647,10 @@ func (m *Message) IsCommand() bool {
 		return false
 	}
 
-	entity := m.Entities[0]
-	return entity.Offset == 0 && entity.IsCommand()
+	for _, entity := range m.Entities {
+		return entity.Offset == 0 && entity.IsCommand()
+	}
+	return false
 }
 
 // Command checks if the message was a command and if it was, returns the
